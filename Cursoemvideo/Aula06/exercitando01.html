@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var aceitou = window.confirm("Olá, seja bem vindo ao sistema, deseja informar algumas coisas?")
+        if (aceitou) {
+            var nome = window.prompt("Digite seu nome:")
+            document.write(`<p>Prazer em conhecer ${nome} </p> <br>`)
+            var data = Number(window.prompt("Digite sua data de nascimento"))
+            var idade = 2022 - data
+            var meses = idade * 12
+            var dias = meses * 30
+
+            document.write(`<p> Você nasceu em ${data}. Tem ${idade} anos de idade, ${meses} meses e ${dias} dias <br> `)
+            document.write(`
+            <p> Seu nome tem ${nome.length} letras. <br>
+            Começa com A?${nome.startsWith("A")}   `)
+        }
+
+
+    </script>
+</body>
+</html>
