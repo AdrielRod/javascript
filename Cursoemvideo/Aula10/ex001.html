@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            background-color: rgb(47, 63, 22);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"
+    onclick="clicar()" 
+    onmouseenter="entrar()"
+    onmouseout="saiu()">
+        Interaja
+    </div>
+    <script>
+        var conteudo = document.getElementById("area")
+
+        /* Esta é outra forma de chamar funções, basta apenas adicionar o EventListener no Js*
+        váriavelComOElemento.AddEventListener('evento', nomeFunção)
+        
+        Você passa de 
+
+        onclick="clicar()" 
+        onmouseenter="entrar()"
+        onmouseout="saiu()"
+
+        Para
+
+        conteudo.AddEventListener('click', clicar)
+        conteudo.AddEventListener('mouseenter', clicar)
+        conteudo.AddEventListener('mouseout', saiu)
+        
+        Por algum motivo não funciona */
+
+        /*conteudo = document.write(palavra)
+        estava fazendo errado, queria fazer com que apenas o conteudo mudasse, mas o quadrado sumia. Se eu deixar desse jeito, eu vou acabar escrevendo com a propriedade write dentro da div, e o que eu quero é só mudar o conteudo
+        */
+        function clicar(){
+            conteudo.innerText = "você clicou"
+            conteudo.style.background = "blue"
+            conteudo.style.color = "pink"
+        }
+        function entrar(){
+            conteudo.innerText = "você entrou"
+            conteudo.style.background = "rgb(47, 63, 22)"
+        }
+        function saiu(){
+            conteudo.innerText ="você saiu"
+            conteudo.style.background = "green"
+        }
+    </script>
+</body>
+</html>
