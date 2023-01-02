@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+</head>
+<body>
+    <h1>Digite dois números:</h1>
+    <input type="number" name="Numero1" id="n1">
+    <input type="number" name="Numero2" id="n2">
+    <input type="button" value="Somar" onclick="Somar()">
+
+    <div id="res">Resultado</div>
+    <script>
+        
+        function Somar(){
+            var texto1 = document.getElementById("n1")
+            var texto2 = document.getElementById("n2")
+            var palavra = document.getElementById("res")
+            /* Nesta seção eu faço referencia as minhas varíaveis as respectivas ids dos inputs e botões*/ 
+
+            /* Por se tratar de numero, tenho que converter. Invés de fazer por inner HTML, temos que fazer por value, que significa o valor dentro da caixa de input*/
+            var n1 = Number(texto1.value)
+            var n2 = Number(texto2.value)
+            
+            var soma = n2 + n1
+            palavra.innerHTML = `A soma entre ${n1} mais ${n2} é igual a ${soma}`
+        }
+    </script>
+</body>
+</html>
