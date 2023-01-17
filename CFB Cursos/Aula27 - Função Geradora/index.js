@@ -33,20 +33,19 @@ function* contator(){
 const itc= contator()
 
 console.log(itc.next().value) */
+let idd=0
 
 function* id(){
-    let id=0
-    
+
     while(true)
     {
-        id++
-        if (id > 10)
-        {
-            break
-        }
+        yield "O valor:"
+        yield idd++
     }
 }
 
 const idUser = id()
-console.log(idUser.next().value)
-console.log(idUser.next().value)
+while (idd <= 10)
+{
+    console.log(idUser.next().value)
+}
